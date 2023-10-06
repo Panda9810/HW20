@@ -174,3 +174,17 @@ footer {
         font-size: 29px;
     }
 }
+.animated-title {
+    animation: fadeInUp 10s forwards;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
