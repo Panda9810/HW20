@@ -65,3 +65,52 @@ $('.page-button').hover(
     }
 );
 })
+//
+$(document).ready(function() {
+    console.log('JavaScript code is running.');
+
+    // Bounce animation for the logo
+    $('.logo').hover(
+        function() {
+            $(this).addClass('bounce');
+        },
+        function() {
+            $(this).removeClass('bounce');
+        }
+    );
+
+    // Bounce animation for the "Work" header
+    $('.animated-title').hover(
+        function() {
+            $(this).addClass('bounce');
+        },
+        function() {
+            $(this).removeClass('bounce');
+        }
+    );
+
+    // Button hover effect
+    $('.page-button').hover(
+        function() {
+            console.log('Mouse entered the element.');
+            $(this).css('background-color', 'blue');
+        },
+        function() {
+            console.log('Mouse left the element.');
+            $(this).css('background-color', '');
+        }
+    );
+
+    // Navigation link hover effect
+    $('header ul a').hover(
+        function() {
+            $(this).toggleClass('nav-hover');
+        }
+    );
+
+    // Animated text fadeInUp effect
+    const animatedText = document.querySelector('.animated-text');
+    if (animatedText) {
+        animatedText.style.animation = 'fadeInUp 1s forwards';
+    }
+});
